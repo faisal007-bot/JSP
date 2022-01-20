@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/Javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <!-- load on startup is used to instantiate the servlet at the time of deploying on the server
+  for positive values - priority goes from 0 -> 1 -> 2 and so on -->
+  <!-- <load-on-startup>1</load-on-startup> -->
+  <!-- if negative value will be passed then servlet will instantiate at the first request -->
+  <!-- <load-on-startup>-1</load-on-startup> -->
+  
+  
+  <!-- if we want to handle exceptions on all the jsp pages in the web application we can handle the exception 
+  in the web.xml file -->
+  <error-page>
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/Exception.jsp</location>
+  </error-page>
+  
+  <!-- we can also handle the error code of all the jsp pages in the web application --> 
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/Exception.jsp</location>
+  </error-page>
+  
+  <!-- creating clean URL -->
+  <servlet>
+  	<servlet-name>dec</servlet-name>
+  	<jsp-file>/Declaration.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>dec</servlet-name>
+  	<url-pattern>/d</url-pattern>
+  	<url-pattern>/dec</url-pattern>
+  	<url-pattern>/declare</url-pattern>
+  </servlet-mapping>
+</web-app>

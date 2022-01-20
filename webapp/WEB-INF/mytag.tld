@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>  
+<taglib xsi:schemaLocation="http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd"
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+version="2.1"> 
+	<tlib-version>2.1</tlib-version>
+
+  <tag>
+  	<name>mytag</name>
+  	<tag-class>com.tag.MyTag</tag-class>
+  </tag>
+  
+  <tag>
+  	<name>attr</name>
+  	<tag-class>com.tag.TagAttribute</tag-class>
+  	<attribute>
+  		<name>number1</name>
+  		<required>true</required>
+  	</attribute>
+  	<attribute>
+  		<name>number2</name>
+  		<required>true</required>
+  	</attribute>
+  </tag>
+</taglib>  
